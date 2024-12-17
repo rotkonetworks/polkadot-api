@@ -77,6 +77,9 @@ importers:
       '@polkadot-api/ledger-signer':
         specifier: workspace:*
         version: link:../../packages/signers/ledger-signer
+      '@polkadot-api/meta-signers':
+        specifier: workspace:*
+        version: link:../../packages/signers/meta-signers
       '@polkadot-api/substrate-bindings':
         specifier: workspace:*
         version: link:../../packages/substrate-bindings
@@ -660,6 +663,24 @@ importers:
         specifier: ^22.9.1
         version: 22.9.1
 
+  packages/signers/meta-signers:
+    dependencies:
+      '@polkadot-api/metadata-builders':
+        specifier: workspace:*
+        version: link:../../metadata-builders
+      '@polkadot-api/polkadot-signer':
+        specifier: workspace:*
+        version: link:../polkadot-signer
+      '@polkadot-api/signer':
+        specifier: workspace:*
+        version: link:../signer
+      '@polkadot-api/substrate-bindings':
+        specifier: workspace:*
+        version: link:../../substrate-bindings
+      '@polkadot-api/utils':
+        specifier: workspace:*
+        version: link:../../utils
+
   packages/signers/pjs-signer:
     dependencies:
       '@polkadot-api/metadata-builders':
@@ -727,8 +748,8 @@ importers:
         specifier: ^22.9.0
         version: 22.9.1
       smoldot:
-        specifier: 2.0.33
-        version: 2.0.33
+        specifier: 2.0.34
+        version: 2.0.34
 
   packages/substrate-bindings:
     dependencies:
@@ -2491,8 +2512,8 @@ packages:
     resolution: {integrity: sha512-bSiSngZ/jWeX93BqeIAbImyTbEihizcwNjFoRUIY/T1wWQsfsm2Vw1agPKylXvQTU7iASGdHhyqRlqQzfz+Htg==}
     engines: {node: '>=18'}
 
-  smoldot@2.0.33:
-    resolution: {integrity: sha512-EnGqFb2oJSYjR04WsvL4tZNPrkdSiScBk3yQUhvWwJqpJ2bBu8Sq/hQgyVB20J1NxJ6FL0cgldjnGJmH1iQCTg==}
+  smoldot@2.0.34:
+    resolution: {integrity: sha512-mw9tCbGEhEp0koMqLL0jBEixVY1MIN/xI3pE6ZY1TuOPU+LnYy8FloODVyzkvzQPaBYrETXJdRlmA/+k6g3gow==}
 
   sort-keys@5.1.0:
     resolution: {integrity: sha512-aSbHV0DaBcr7u0PVHXzM6NbZNAtrr9sF6+Qfs9UUVG7Ll3jQ6hHi8F/xqIIcn2rvIVbr0v/2zyjSdwSV47AgLQ==}
@@ -4562,7 +4583,7 @@ snapshots:
       ansi-styles: 6.2.1
       is-fullwidth-code-point: 5.0.0
 
-  smoldot@2.0.33:
+  smoldot@2.0.34:
     dependencies:
       ws: 8.18.0
     transitivePeerDependencies:
